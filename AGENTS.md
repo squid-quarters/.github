@@ -28,21 +28,13 @@ tests — and make them all pass. Do not skip checks or bypass hooks
 
 ## Agent autonomy & pre-merge review
 
-When working at high autonomy, every PR you cut MUST pass an
-agent-driven pre-merge review loop before it's presented to a developer:
-
-1. Author the change on a feature branch; run all checks green.
-2. Spawn separate agent code reviews — as many as the change warrants
-   (parallel specialists across code, tests, behavior).
-3. Analyze every review's findings; fix all important issues on the
-   same branch.
-4. Re-run all tests and checks after the fixes.
-5. Repeat steps 2–4 iteratively until a review pass surfaces no
-   important issues.
-6. Only then present the work back to the developer for review.
-
-CI green is necessary but not sufficient — the review loop catches what
-CI and self-review miss. Do not surface a PR for human review mid-loop.
+Read the shared [review process](https://github.com/squid-quarters/.github/blob/main/REVIEW.md)
+before review or integration. It applies to code,
+design, docs and workflow changes: independent substantive review (AI accepted),
+material fixes, repeated review until clean, final applicable checks/tests and
+PR evidence before autonomous scoped merge. Inspect publishing triggers;
+deployments, credentials, production data and access/security changes require
+separate task authority.
 
 ## Tracked work
 
